@@ -1,0 +1,102 @@
+<?php
+
+include  'db_connect.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARNATAKA CONVEYORS</title>
+    <link rel="stylesheet" href="ka.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <section id="homepage">
+        <img src="image/logo.jpeg" class="logo">
+        <div class="homepage-text">
+            <h1>KARNATAKA CONVEYORS</h1>
+            <p>WE DESIGN,MANUFACTURE,INSTALL AND COMMISSION WIDE RANGE OF CONVEYORS</p>
+        <div class="homepage-btn">
+            <a href="contact.html"><span></span>CONTACT US</a>
+            <a href="aboutus.html"><span></span>ABOUT US</a>
+    </section>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><i class="fas fa-laptop-house"></i>&nbsp;<a href="homepage.html">HOME</a></li>
+                <li><i class="fas fa-sign-in-alt"></i>&nbsp;<a href="login.php">LOGIN</a></li>
+                <li><i class="fas fa-tram"></i>&nbsp;
+                   <a href="#" class="catalog-btn">CONVEYORS
+                        <span class="fas fa-caret-down first"></span>
+                    </a>
+                    <ul class="catalog-show">
+                        <li><a href="slat.html">slat</a></li>
+                        <li><a href="roller.html">Roller</a></li>
+                        <li><a href="scrap.html">Scrap</a></li>
+                        <li><a href="scrap chip.html">Scrap Chip</a></li>
+                        <li><a href="foundry.html">Foundry</a></li>
+                        <li><a href="telescopic belt.html">Telescopic Belt</a></li>
+                        <li><a href="chain.html">Chain</a></li>
+                        <li><a href="belt.html">Belt</a></li>
+                        <li><a href="special.html">Special Type</a></li>
+                        <li><a href="z-pan.html">Z-Pan </a></li>
+                        <li><a href="equipments.html">Equipments</a></li>
+                    </ul>
+                </li>
+                <li><i class="fab fa-servicestack"></i>&nbsp;
+                    <a href="#" class="ser-btn">SERVICES
+                        <span class="fas fa-caret-down second"></span>
+                     </a>
+                    <ul class="ser-show">
+                        <li><i class="fas fa-file-alt"></i>&nbsp;<a href="quotation.html">quotation</a></li>
+                        <li><i class="fab fa-cc-apple-pay"></i>&nbsp;<a href="payment.html">payment</a></li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-user-friends"></i>&nbsp;<a href="emp.html">EMPLOYEE</a></li>
+                <li><i class="fas fa-comments"></i>&nbsp;<a href="feedback.html">FEEDBACK</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div id="menubtn">
+            <img src="image/menu2.png" id="menu">
+            </div>
+            <script>
+                var menubtn=document.getElementById("menubtn")
+                var sidenav=document.getElementById("sidenav")
+                var menu=document.getElementById("menu")
+
+                sidenav.style.right="-250px";
+            menubtn.onclick=function(){
+                if(sidenav.style.right=="-250px"){
+                sidenav.style.right="0";
+                menu.src ="image/cancel2.png";
+                 }
+                 else{
+                    sidenav.style.right="-250px";
+                    menu.src ="image/menu2.png";
+                 }
+        }
+
+            </script>
+             <script>
+                 $('.catalog-btn').click(function(){
+                     $('nav ul .catalog-show').toggleClass("show");
+                     $('nav ul .first').toggleClass("rotate");
+                 });
+                 $('.ser-btn').click(function(){
+                     $('nav ul .ser-show').toggleClass("show1");
+                     $('nav ul .second').toggleClass("rotate");
+                 });
+                 $('nav ul li').click(function(){
+                    $(this).addClass("active").siblings().removeClass("active");s
+                 });
+             </script>
+
+    
+</body>
+</html>
+
